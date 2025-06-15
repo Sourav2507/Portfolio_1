@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Sourav's Portfolio
+{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+
+<header>
+    <div>
+        <div class="main-head">
+            <h2>Sourav's Portfolio</h2>
+            <nav class="navs">
+                <div class="nav-contents">
+                    <ul>
+                        <li class="links"><a href="#section1">About</a></li>
+                        <li class="links"><a href="#section2">Academic Records</a></li>
+                        <li class="links"><a href="#section3">Projects</a></li>
+                        <li class="links"><a href="#section4">Contacts</a></li>
+                    </ul>
+                    <!-- <div class="reg-link">
+                        <a href="#" onclick="toggleTheme()">
+                            <img src="{{ url_for('static', filename='images/moon.png') }}" alt="Toggle Theme" width="50">
+                        </a>
+                    </div> -->
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<section id="section1">
+    </div>
+    <div class="section1-text" style="flex: 2; min-width: 40vh;">
+        <div class="subheading" style="background-color:transparent; padding-left: 0;">
+            <h1 style="padding: 3vh; padding-left: 0;">Sourav Debnath</h1>
+        </div>
+        <p>
+            Hello! Welcome to my portfolio website. I'm an IT student passionate about learning and building with modern
+            technologies. I enjoy turning ideas into real-world solutions through code and collaboration.
+        </p>
+        <br>
+        <h2>Technologies I’ve Worked With:</h2>
+        <div class="tech-images" style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+            <img src="{{ url_for('static', filename='images/python.png') }}" alt="Python" width="60" height="60">
+            <img src="{{ url_for('static', filename='images/java.png') }}" alt="Java" width="50" height="60">
+            <img src="{{ url_for('static', filename='images/html.png') }}" alt="HTML" width="55" height="60">
+            <img src="{{ url_for('static', filename='images/css.png') }}" alt="CSS" width="45" height="60">
+            <img src="{{ url_for('static', filename='images/js.png') }}" alt="JavaScript" width="55" height="60">
+            <img src="{{ url_for('static', filename='images/vue.png') }}" alt="Vue.js" width="55" height="60">
+            <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask" width="55" height="60"
+                style="background-color: #f8f9fa; border-radius: 50%;">
+            <img src="{{ url_for('static', filename='images/postgre.png') }}" alt="PostgreSQL" width="60" height="60">
+            <img src="{{ url_for('static', filename='images/firebase.png') }}" alt="Firebase" width="60" height="60">
+            <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" width="55" height="55"
+                style="background-color: #f8f9fa; border-radius: 50%;">
+        </div>
+        <div class="register-now">
+            <a href="{{ url_for('download_resume') }}" method="get" style="text-decoration: none;">Download Resume</a>
+        </div>
+    </div>
+    <div id='images' class="section1-img">
+        <img class="image1" src="{{ url_for('static', filename='images/sourav.png') }}" alt="My Image" width="250">
+    </div>
+</section>
+
+<section id="section2">
+    <div class="subheading">
+        <img src="{{ url_for('static', filename='images/feature_2.png') }}" alt="My Image" width="120" height="120">
+        <h1 style="padding: 3vh;">Academic Records</h1>
+    </div>
+
+    <div class="full-width-feature">
+        <img src="{{ url_for('static', filename='images/IIT_Madras_Logo.png') }}" alt="My Image" width="250"
+            style="margin-left: 10vh;">
+        <div class="featureData">
+            <h2 style="padding: 4vh;">Indian Institute of Technology, Madras</h2>
+            <p><strong>Program:</strong> BS Degree in Data Science and Applications (Diploma Level)</p>
+            <p><strong>Duration:</strong> Jan 2023 – Present</p>
+            <p><strong>Status:</strong> Completed Diploma Level with Distinction</p>
+            <p><strong>Highlights:</strong></p>
+            <div style="padding-left: 3vh;">6+ Topper Badges in subjects like Python, DSA, DBMS, Java and Business Data
+                Management</div>
+        </div>
+    </div>
+    <div class="full-width-feature">
+        <img src="{{ url_for('static', filename='images/tit_logo.png') }}" alt="My Image" width="250"
+            style="margin-left: 10vh;">
+        <div class="featureData">
+            <h2 style="padding: 4vh;">Tripura Institute of Technology, Narsingarh</h2>
+            <p><strong>Program:</strong> B.Tech in Computer Science and Engineering</p>
+            <p><strong>Duration:</strong> Aug 2022 – Present</p>
+            <p><strong>CGPA:</strong> 8.15 (as of 6th semester)</p>
+            <p><strong>Highlights:</strong></p>
+            <div style="padding-left: 3vh;">SPC Vice President(2026). </div>
+            <div style="padding-left: 3vh;">Intern at NIELIT.</div>
+            <div style="padding-left: 3vh;">Intern at Directorate of Information Technology.</div>
+        </div>
+    </div>
+    <div class="full-width-feature">
+        <img src="{{ url_for('static', filename='images/PVM-Logo.png') }}" alt="My Image" width="250"
+            style="margin-left: 10vh;">
+        <div class="featureData">
+            <h2 style="padding: 4vh;">Pranavananda Vidyamandir, Agartala</h2>
+            <p><strong>Level:</strong> Higher Secondary Education (Science Stream)</p>
+            <p><strong>Duration:</strong> 2020 – 2022</p>
+            <p><strong>Score:</strong> 85.6% (Class 12 Board Examination)</p>
+        </div>
+    </div>
+</section>
+
+<section id="section3">
+    <div class="subheading">
+        <img src="{{ url_for('static', filename='images/vision.png') }}" alt="My Image" width="120" height="120">
+        <h1 style="padding: 3vh;">Projects</h1>
+    </div>
+    <div class="full-width-feature">
+        <img src="{{ url_for('static', filename='images/IIT_Madras_Logo.png') }}" alt="My Image" width="250"
+            style="margin-left: 10vh;">
+        <div class="featureData">
+            <h2 style="padding: 4vh;">Gleam</h2>
+            <p>
+                Gleam is a fully functional e-commerce Android application built using Java and XML, integrated with
+                Firebase for user authentication and real-time data storage. It allows users to browse clothing items,
+                manage a shopping cart, and securely complete purchases. Designed for smooth user experience and
+                efficient performance on Android devices.
+            </p>
+            <div class="highlights">
+                <div class="tag tag-android">Android</div>
+                <div class="tag tag-java">Java</div>
+                <div class="tag tag-firebase">Firebase</div>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/dp-13s/new-e-commerce" target="_blank" class="action-btn github">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="https://drive.google.com/file/d/1UCdd73X9qqTypCbQy5kd2hnKEbcWNEiY/view?usp=sharing"
+                    target="_blank" class="action-btn live">
+                    <i class="fas fa-download"></i> Get APK
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="full-width-feature">
+        <div class="featureData">
+            <h2 style="padding: 4vh;">GleamPlanner</h2>
+            <p>
+                GleamPlanner is a productivity-focused Android application developed using Java and SQLite. It enables
+                users to add, update, and track daily tasks through a simple and intuitive interface. With Firebase
+                Authentication, each user's to-do data is securely stored and easily accessible across sessions.
+            </p>
+            <div class="highlights">
+                <div class="tag tag-android">Android</div>
+                <div class="tag tag-java">Java</div>
+                <div class="tag tag-sqlite">SQLite</div>
+                <div class="tag tag-firebase">Firebase</div>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/Sourav2507/GleamPlanner_A_Todo_Reminder_Android_Application" target="_blank"
+                    class="action-btn github">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="https://drive.google.com/file/d/1D7WBlyM66FNItPcDp9e0hbCpJAy1nJEO/view?usp=sharing"
+                    target="_blank" class="action-btn live">
+                    <i class="fas fa-download"></i> Get APK
+                </a>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/IIT_Madras_Logo.png') }}" alt="My Image" width="250"
+            style="margin-right: 10vh;">
+    </div>
+    <div class="full-width-feature">
+        <img src="{{ url_for('static', filename='images/IIT_Madras_Logo.png') }}" alt="My Image" width="250"
+            style="margin-left: 10vh;">
+        <div class="featureData">
+            <h2 style="padding: 4vh;">Household Services Application</h2>
+            <p>
+                This web application, built using Flask, Bootstrap, and SQLite, connects service professionals with
+                customers in need of household services. It features role-based login, real-time service tracking, and a
+                clean, mobile-responsive interface. The project emphasizes simplicity and usability while ensuring
+                secure data management.
+            </p>
+            <div class="highlights">
+                <div class="tag tag-flask">Flask</div>
+                <div class="tag tag-bootstrap">Bootstrap</div>
+                <div class="tag tag-sqlite">SQLite</div>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/Sourav2507/IITM_MAD1-Project" target="_blank" class="action-btn github">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="https://iitm-mad1-project.onrender.com" target="_blank" class="action-btn live">
+                    <i class="fas fa-external-link-alt"></i> View Website
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="full-width-feature">
+        <div class="featureData">
+            <h2 style="padding: 4vh;">Vehicle Parking V2</h2>
+            <p>
+                Vehicle Parking V2 is a modern full-stack parking management system developed with Flask (backend),
+                Vue.js (frontend), SQLite (database), and Redis + Celery for asynchronous job handling. It includes
+                separate user/admin portals, booking history, and real-time updates for parking slots. Designed for
+                efficiency, scalability, and clarity in user experience.
+            </p>
+            <div class="highlights">
+                <div class="tag tag-flask">Flask</div>
+                <div class="tag tag-vue">Vue.js</div>
+                <div class="tag tag-redis">Redis</div>
+                <div class="tag tag-sqlite">SQLite</div>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/Sourav2507/IITM_MAD2" target="_blank" class="action-btn github">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="{{ url_for('vehicle_parking_V2') }}" target="_blank" class="action-btn live">
+                    <i class="fas fa-external-link-alt"></i> View Website
+                </a>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/IIT_Madras_Logo.png') }}" alt="My Image" width="250"
+            style="margin-right: 10vh;">
+    </div>
+</section>
+
+<section id="section4">
+    <div class="subheading">
+        <img src="{{ url_for('static', filename='images/handshake.png') }}" alt="My Image" width="120" height="120">
+        <h1 style="padding: 3vh;">Get in Touch</h1>
+    </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="get-in-touch text-center my-5">
+
+                <h3 style="background: none; font-weight: 500; font-size: 1.8rem; text-align: center;">
+                    I'd Love to Hear from You!
+                </h3>
+                <p style="max-width: 600px; margin: auto; font-size: 1.1rem; color: #555;">
+                    Whether you have questions, feedback, or collaboration ideas, feel free to reach out. I’m always
+                    open to connecting and helping out!
+                </p>
+                <div class="tech-images" style="display: flex; flex-wrap: wrap; gap: 15vh; align-items: center; justify-content: center;">
+                    <a href="mailto:souravdebnath9838@gmail.com" target="_blank"><img src="{{ url_for('static', filename='images/email.png') }}" alt="Email" width="60"
+                        height="60"></a>
+                    <a href="https://www.linkedin.com/in/sourav-debnath-996479254/" target="_blank"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" width="60"
+                        height="60"></a>
+                    <a href="https://github.com/Sourav2507" target="_blank"><img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" width="60"
+                        height="60"></a>
+                    <a href="https://x.com/SouravDebnath25" target="_blank"><img src="{{ url_for('static', filename='images/x.png') }}" alt="X" width="60"
+                        height="60"></a>
+                    <a href="https://app.onlinedegree.iitm.ac.in/student/23F1001907" target="_blank"><img src="{{ url_for('static', filename='images/IIT_Madras_Logo.png') }}" alt="IIT Madras" width="60"
+                        height="60"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 Sourav Debnath. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="mailto:souravdebnath9838@gmail.com">Email</a>
+        <a href="https://github.com/Sourav2507" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sourav-debnath-996479254/" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+{% endblock %}
